@@ -1,0 +1,271 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* =========================
+   AUTH PAGES (LOGIN + REGISTER)
+========================= */
+
+body:not(.posts-bg) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4e73df, #1cc88a);
+}
+
+/* Card Container */
+.container {
+  background: #ffffff;
+  width: 380px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.container h2 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 11px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: 0.3s ease;
+  font-size: 14px;
+}
+
+.input-group input:focus {
+  border-color: #4e73df;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(78, 115, 223, 0.2);
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  color: #fff;
+}
+
+.primary-btn {
+  background-color: #4e73df;
+}
+
+.primary-btn:hover {
+  background-color: #2e59d9;
+}
+
+.success-btn {
+  background-color: #1cc88a;
+}
+
+.success-btn:hover {
+  background-color: #17a673;
+}
+
+/* Links */
+.switch-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.switch-link a {
+  color: #4e73df;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.switch-link a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   POSTS PAGE
+========================= */
+
+.posts-bg {
+  background: #f4f6f9;
+  padding-bottom: 90px; /* space for bottom bar */
+}
+
+/* Navbar */
+.navbar {
+  background: #4e73df;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  font-size: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+}
+
+.logout-btn {
+  background: white;
+  color: #4e73df;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #e2e6ea;
+}
+
+/* Posts Container */
+.posts-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Individual Post */
+.post {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.post-header strong {
+  color: #333;
+}
+
+.post-date {
+  color: #888;
+  font-size: 12px;
+}
+
+.post p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* =========================
+   FIXED BOTTOM INPUT BAR
+========================= */
+
+.bottom-post-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 12px 15px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.bottom-post-bar form {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.bottom-post-bar input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.bottom-post-bar input:focus {
+  border-color: #4e73df;
+  outline: none;
+}
+
+.bottom-post-bar button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: #4e73df;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bottom-post-bar button:hover {
+  background: #2e59d9;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .posts-container {
+    margin: 20px auto;
+  }
+
+  .navbar h2 {
+    font-size: 16px;
+  }
+
+  .bottom-post-bar form {
+    flex-direction: column;
+  }
+
+  .bottom-post-bar button {
+    width: 100%;
+  }
+}
